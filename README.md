@@ -1,2 +1,10 @@
-# rt-blog
-RTの運営によるちょっとしたことを書き留めるためのGithubPagesのリポジトリです。
+# RT Blogへようこそ
+ここはRT運営がちょっとしたことを書き留めたい際に使うところです。  
+RTってなにな人は[ここ](https://rt-bot.com/)に行こう。
+
+## カテゴリー
+* [RTのトラブルシューティング](/trouble)
+
+## 誤字や追記などの依頼
+[このリポジトリ](https://github.com/RT-Team/RT-Team.github.io)でissueを立てるかPullRequestを出してください。  
+もしめんどくさい場合は上にある`ここ`と書いてあるリンク先にあるRTの公式Discordサーバーで問い合わせてください。
