@@ -5,6 +5,7 @@ RTってなにな人は[ここ](https://rt-bot.com/)に行こう。
 ## カテゴリー
 * [RTのトラブルシューティング](/trouble)
 * [Notes (メモ, Tips)](/notes)
+* [りつたん (RTのサブ)](/rt-chan)
 
 ## 誤字や追記などの依頼
 [このリポジトリ](https://github.com/RT-Team/RT-Team.github.io)でissueを立てるかPullRequestを出してください。  
