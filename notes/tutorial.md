@@ -43,11 +43,11 @@ Discordの捨て垢の集団をプログラムを使い自動で動かしスパ�
 捨て垢は売買されていたりするため認証は困難です。  
 特にWeb認証は強いでしょう。
 ### やり方
-[https://rt-bot.com/help.html?g=server-safety&c=captcha](こちら)から確認が可能です。
+[こちら](https://rt-bot.com/help.html?g=server-safety&c=captcha)から確認が可能です。
 
 ## スパム対策の設定
 RTを使うことでスパムを発見したらミュート/BANということをするようにすることができます。  
-[https://rt-bot.com/help.html?g=server-safety&c=automod](こちら)をよーく見てみましょう。
+[こちら](https://rt-bot.com/help.html?g=server-safety&c=automod)をよーく見てみましょう。
 
 ## 終わり
 終わり早すぎないと思うかもしれませんがヘルプの見方がわかればヘルプを見るだけでRTを使いこなせます。  
