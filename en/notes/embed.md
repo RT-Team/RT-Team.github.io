@@ -1,31 +1,31 @@
-[Notesホームに戻る](/notes)
+[Back to notes](/notes)
 * * *
-# RT embedコマンド 使用方法
-以下のようにすることで埋め込みを作ることが可能です。
+# How to user RT embed command
+It is possible to make an embedding by doing the following.
 ```
-rt!embed [urlまたはwebhook] カラーコード タイトル
-内容
+rt!embed [url or webhook] "color code" title
+content
 ```
-`[urlまたはwebhook]`の部分は`url`にした場合は送ったら埋め込みが現れるURLを作ることができます。
-`webhook`にした場合はウェブフックで埋め込みを送信します。  
-`url`の場合はすぐに反映されないことがあります。待ちましょう。それと改行がされません。  
-この場合はURLを含む必要がありませんがメッセージの編集をすることができなくなります。  
-カラーコードは埋め込みの色で、指定方法については[こちら](https://rt-team.github.io/notes/color)をご覧ください。  
-ウェブフックの場合内容をマークダウンで書くことができます。  
-なので以下のように書くことが可能です。
+If you set the part of `[url or webhook]` to `url`, you can create a URL where the embedded will appear when you send it.
+If you set it to `webhook`, you can send an embedded with a webhook.  
+In the case of `url`, it may not be reflected immediately. Let's wait. And there will be no newlines.  
+In this case, you don't need to include the URL, but you won't be able to edit the message.  
+The color code is embedded color, and please see [here] (https://rt-team.github.io/en/notes/color) for how to specify it.。  
+In the case of web hooks, you can write the contents with markdown.  
+So it is possible to write as follows.
 ```
-rt!embed webhook カラーコード タイトル
-説明
-## フィールド
-フィールドの説明
-## フィールド
-フィールドの説明
-## !横に並ばないフィールド
-フィールドの説明
-## !横に並ばないフィールド
-フィールドの説明
-### フィールドの中のフィールド
-※これ以上深いフィールドは作れない。
+rt!embed webhook "color code" title
+description
+## field
+field description
+## field
+field description
+## !Fields that don't line up sideways
+Description of the field
+## !Fields that don't line up sideways
+Description of the field
+### Fields in the field
+※You can't make a deeper field.
 ```
 ※`#`一つだけは使えません、`## `か`## !`または`### `が使えます。  
 また横に並ばないフィールドというのは、そのフィールドの項目が前のフィールドの右に来ることがないということです。  
