@@ -1,4 +1,4 @@
-[Back to notes](/notes)
+[Back to notes](/en/notes)
 * * *
 # How to user RT embed command
 It is possible to make an embedding by doing the following.
@@ -27,35 +27,35 @@ Description of the field
 ### Fields in the field
 ※You can't make a deeper field.
 ```
-※`#`一つだけは使えません、`## `か`## !`または`### `が使えます。  
-また横に並ばないフィールドというのは、そのフィールドの項目が前のフィールドの右に来ることがないということです。  
-右にくることがあるのはWeb版とPC版のDiscordのみで、iOSやiPad OSそしてAndroidなどでは普通のフィールドと変わりがないです。  
-それと普通マークダウンでは改行をする際にスペースを二つ置く必要がありますがこれはする必要はないです。
+Only one `#` can not be used,`## `or`## !`or` ### ` can be used.  
+A field that does not line up is one in which the items in the field are never to the right of the previous field.  
+The field can be on the right only in the web and PC versions of Discord, but on iOS, iPad OS, and Android, it is the same as the normal field.  
+Also, in general markdown, you need to put two spaces when you start a new line, but you don't need to do this.
 
-## メモ
-デフォルトでは作られる埋め込みの投稿者は実行者の名前になりアイコンも実行者のアイコンになります。  
-これはWebhookを使用して送っているからで、もしRTの名前とアイコンで埋め込みを投稿して欲しい場合は`--rticon`をタイトルの前に入れてください。  
-それと`rt>embed`をチャンネルのトピックに入れることで、そのチャンネルに送ったメッセージを自動でEmbedにしてくれます。  
-また既に作ったものに返信をしてコマンドを実行すれば編集ができます。
+## Note
+By default, the submitter of the embed will be the name of the executor and the icon will be the icon of the executor.  
+This is because the embed is being sent using a webhook, so if you want the embed to be posted with the name and icon of RT, put `--rticon` before the title.  
+That and putting `rt>embed` in the channel topic will automatically embed any message you send to that channel.  
+You can also reply to something you have already created and run the command to edit it.
 
-## 例
-### 普通
+## Example
+### Normal
+```markdown
+rt!embed url null welcome
+First, let's check the rules with ## rules.
 ```
-rt!embed url null ようこそ
-まずは#ルールでルールを確認しましょう。
+### Punishment history.
+```markdown
+rt!embed webhook red Punishment history
+Kicked @tasuren.
+## Reason.
+Because he said something naughty.
 ```
-### 処罰履歴
-```
-rt!embed webhook red 処罰履歴
-@tasurenをKickしました。
-## 理由
-えっちなことを言ったから。
-```
-### ルール
-```
-rt!embed webhook ルール
-## !ルール 一
-仲良く
-## !ルール 二
-NSFWなものはNG
+### Rules.
+```markdown
+rt!embed webhook rule.
+## !Rule 1
+friendly
+## !Rule #2
+No NSFW stuff.
 ```

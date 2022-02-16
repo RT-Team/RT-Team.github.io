@@ -1,101 +1,94 @@
-[Notesホームに戻る](/notes)
+[Return to Notes home](/en/notes)
 * * *
-# あなたの味方となるヘルプの見方のウェブページ
-なんちって。  
+# How to see help
+## The difference between the web version
+There is no difference.
+The order of the display and command help is a bit different, that's all.
 
-面白くないですねハイすみませんでした。
-
-## ウェブ版ヘルプとDiscord版ヘルプの違いについて
-特にありません。  
-表示とコマンドヘルプの順番がちょっと違ったりするだけです。
-
-## 本編
-![「rt!help captcha」と実行した際に表示される画像](/img/notes/help.png)
-例として`captcha`コマンドのヘルプの画像を用意しました。  
-`rt!help captcha`を実行すればDiscordでも閲覧が可能です。
-### コマンドの引数について
-そのコマンドが必要としてる情報を文字でコマンドの後ろに置くというものです。  
-例えば「大好き！」か「大嫌い！」のどっちかを言ってもらうコマンド`rt!love`があったとします。  
-この`rt!love`だけを実行してもRTは好き嫌いどっちを言えばいいかわかりません。  
-そしてRTは`rt!love yesかno`のように`rt!love`の後ろに`yes`か`no`を置けば好き嫌いどっちを言うか決めれるようになりました。  
-この`yes/no`の部分がコマンドの引数です。
-#### コマンドの引数の見方
+## Main
+### Arguments of the command.
+This is where you put the information that the command needs after the command in the form of letters.  
+As an example, suppose there is a command `rt!love` that can be used to say either "I love you!" or "I hate you!".  
+If I just run `rt!love`, RT doesn't know whether to say "I love you!" or "I hate you!".  
+If you put `love` or `hate` after `rt!love`, then RT can decide whether to say love or hate.  
+This `love/hate` part is the command argument.
+#### How to read the command arguments
 ```markdown
-**引数名** : どういう文字を渡せばいいか
-引数の説明
+**argument name** : what characters to pass
+Description of the arguments
 ```
-のようにRTでは表記されます。  
-`captcha`コマンドのヘルプの引数を例としてだします。(上の画像の引数です。)  
+This is used in RT.  
+Here is an example of the arguments in the help file for the `purge` command.  
+You can also view it on Discord by running `rt!help purge`.  
 ```markdown
-**mode** : image,web,左の二つ以外の場合は合言葉
-設定する認証の種類です。
-`image`が画像認証で実行したチャンネルに送信される画像にある数字を正しく入力するという認証です。
-`web`がhCaptchaを利用したウェブでの本格認証です。
-上記二つ以外を入力した場合はその入力した言葉を使った合言葉認証で設定されます。
-もし設定をオフにするならoffにして役職(role)を指定しないでください。
+This is a message batch command.  
+The explanation of message deletion by reaction is at the bottom.
 
-**role** : 役職名または役職のメンション,オプション
-認証成功時に付与する役職の名前またはメンションです。
-もし設定を解除する場合はこれを指定しないでください。
+Parameters
+----------
+count : int
+    The number of messages to delete.
+target : member's mention or name, optional
+    Specify the sender of the message to be deleted.  
+    If not selected, the message will be deleted regardless of the sender.
 ```
-これをコマンド表記にすると以下のようになります。  
-`rt!captcha <mode> <role:オプション>`  
-後はわかりますね、RTのコマンドの引数はその名の通りそのコマンドの引数の説明をしています。
+The command notation is as follows.  
+`rt!purge <count> <target:option>`.  
+After that, you can see that the arguments to the RT command are, as the name implies, a description of the arguments to that command.
 
-#### コマンドの引数に改行または空白がある際について
-もし空白のある引数を入れたい場合は`"`でその引数を囲みましょう。  
-そうしないと空白の次にある文字がその次の引数として使われてしまいます。  
-例えば`危険 ミュート`ロールが付けられたら`メンバー`と言うロールを外すようにしようとコマンドを実行するとします。  
-その時これを実行しました。`rt!linker link 危険 ミュート メンバー on`  
-ですが思うように動きません。  
-これは`危険 ミュート`で引数二つ分が使われてしまっているからです。  
-なので`rt!linker link "危険 ミュート" メンバー on`としないといけません。  
-ですがコマンドの最後の引数(次のひきすうが存在しない)な場合は`"`で挟まなくて良いです。
+#### About arguments with newlines or spaces
+If you want to include an argument with spaces, enclose it with `"`.  
+Otherwise, the character following the space will be used as the next argument.  
+For example, let's say you want to run a command to remove the role `member` when the role `danger mute` is added.  
+You would then do this. `rt!linker link danger mute member on`.  
+But it doesn't work as expected.
+This is because two arguments are used in `danger mute`.  
+So we have to use `rt!linker link "danger mute" member on`.  
+However, if it is the last argument of the command (the next argument doesn't exist), you don't need to put it between `"`.
 
-#### 引数の真偽値とは
-たまに引数の右に真偽値とある場合があります。  
-これはオンオフである`on`または`off`のどちらかを入れれば良いです。
+#### What is the true/false value of an argument?
+In some cases, the right side of an argument has a boolean value.  
+This can be either `on` or `off`.
 
-### エイリアスとは
-たまにエイリアスというのがヘルプに出てくると思います。  
-これはとても便利なものなので知っておいた方が良いです。  
-ここでは`recruitment`という募集パネルを作るコマンドを例として説明します。  
-今この`recruitment`というコマンドは長くて打つのめんどくさいですね。  
-そういうめんどくさい人のためにRT開発者が用意したコマンドの言いかえがエイリアスです。  
-`recruitment`のエイリアスは以下のようになっています。
+### What is an alias?
+You may occasionally see an alias in the help.
+This is a very useful thing and you should know about it.  
+Here is an example of a command to create a recruitment panel called `recruitment`.  
+Now, this command `recruitment` is long and annoying to type.  
+For those who find it annoying, RT developers have prepared an alias for the command.  
+The alias for `recruitment` is as follows from help.
 ```markdown
-# エイリアス
+# Aliases
 recruit, rct
 ```
-この場合`recruitment`は`rct`にしても実行できるということです。  
-RTのコマンドはよく日本語のエイリアスもあるのでよくヘルプを見ればもっと簡単にコマンドが実行できるようになります。  
-いいことを聞けましたねあなた！
+In this case, `recruitment` can also be executed as `rct`.  
+RT commands often have Japanese aliases, so if you read the help carefully, you will be able to run the commands more easily.  
+That's good to know, my friend!
 
-### 複数のコマンドが一つのヘルプにある件について
-`tts`コマンドなどそうなっています。  
-これは複数のコマンドがあるということではなくグループコマンドのサブコマンドがあるということです。
-### グループコマンドとは
-そのコマンドのまた下にコマンドがあるというものです。  
-例えば読み上げのコマンドの`tts`の場合は読み上げ開始コマンドで`rt!tts join`というのがあります。  
-そして切断のコマンドの`rt!tts leave`があります。  
-また`rt!tts dictionary`の辞書コマンドもあります。  
-そしてこの`dictionary`の下にも`add/remove`の辞書追加コマンドがあります。  
-このように機能の複数のコマンドを一つのコマンドにまとめたものがグループコマンドです。  
-サブコマンドはそのグループコマンドにあるコマンド一つ一つのことで`rt!tts join`の`join`にあたります。  
-そういうグループコマンドの場合はそのコマンドのヘルプにそのコマンドのサブコマンドがすべて書いてあります。  
-なので複数のコマンドが一つにあるわけではないです。
+### About multiple commands in one help file.
+The `tts` command, for example, does this.  
+This does not mean that there are multiple commands, but that there are subcommands of a group command.
+### What is a group command?
+For example, the text-to-speak command `tts` has a command to start speaking, `rt!tts join`, and a command to disconnect, `rt!tts leave`.  
+There is also the `rt!tts dictionary` dictionary command.  
+And under this `dictionary`, there are also `add/remove` commands for adding dictionaries.  
+A group command is one that combines multiple commands of a function into a single command.  
+A subcommand is each command in the group command, which is the `join` of `rt!tts join`.  
+In the case of such a group command, all subcommands of the command are described in the help of the command.  
+So it's not like there are multiple commands in one.
 
-### RTのプリフィックスについて
-プリフィックスというのはコマンド実行時にそのコマンドのあるBotのコマンドであるということがわかるようにコマンドを最初に書くものです。  
-RTのプリフィックスは`rt!`となっています。  
-実はこの`rt!`というプリフィックス以外にもRTを呼べるプリフィックスがあります。  
-それは以下の通りです。
+### About RT prefixes
+A prefix is something that is written at the beginning of a command so that when the command is executed, it is known that it is a Bot command.  
+The prefix of RT is `rt!`.  
+Actually, there are other prefixes that can be used to call RT besides the `rt!`.  
+They are as follows:
+
 * rt!
 * rt.
-* りつ！ (このビックリマークは全角)
+* りつ！
 * りつ.
 
-なので実行しようとしてるコマンドに日本語のエイリアスがあれば実行するコマンドを全て日本語にできたりします。
+So, if the command you are trying to execute has a Japanese alias, you can make all the commands you execute Japanese.
 
-## スラッシュについて
-[こちら](/notes/slash_table)をご覧ください
+## About slashes.
+See [here](/en/notes/slash_table)
