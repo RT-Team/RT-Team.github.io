@@ -2,9 +2,12 @@
 ここはRT運営がちょっとしたことを書き留めたい際に使うところです。  
 「RTってなに?」って人は[ここ](https://rt-bot.com/)に行こう。
 
+## english
+Watch [here](/en/index.md).
+
 ## カテゴリー
 * [RTのトラブルシューティング](/trouble)
-* [Notes (メモ, Tips)](/notes)
+* [Notes (メモ, Tips)](/ja/notes)
 * [りつたん (RTのサブ)](/rt-chan)
 
 ## 誤字や追記などの依頼
