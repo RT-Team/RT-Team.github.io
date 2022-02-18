@@ -1,8 +1,8 @@
-[Back to notes](/en/notes)
+[Back](/en/notes)
 * * *
 # How to user RT embed command
 It is possible to make an embedding by doing the following.
-```
+```markdown
 rt!embed [url or webhook] "color code" title
 content
 ```
@@ -13,7 +13,7 @@ In this case, you don't need to include the URL, but you won't be able to edit t
 The color code is embedded color, and please see [here] (https://rt-team.github.io/en/notes/color) for how to specify it.。  
 In the case of web hooks, you can write the contents with markdown.  
 So it is possible to write as follows.
-```
+```markdown
 rt!embed webhook "color code" title
 description
 ## field

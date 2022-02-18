@@ -1,5 +1,8 @@
-[ホームに戻る](/)
+[戻る｜Back](/)
 * * *
+
+English explanation is at the bottom.
+
 # りつたんの使い方
 りつたんとは[Discordの便利なBotのRT](https://rt-bot.com)の音楽再生と読み上げだけを使えるようにしたRTのサブBotです。  
 りつたんを使えばRTの読み上げと音楽再生を同時利用できます。  
@@ -90,3 +93,81 @@ YouTube,ニコニコ動画そしてSoundCloudの再生に対応しています�
 ### クレジット
 りつたんのアイコンの絵は[真夜月。さん](https://coconala.com/users/246022)に作ってもらいました！  
 ありがとうございます。
+
+# How to use Ritsu-tan
+Ritsu-tan is a sub-bot of [Discord's useful bot RT](https://rt-bot.com) that allows you to use only music playback and reading.  
+With Ritsu-tan, you can use RT reading and music playback at the same time.  
+The prefix is `rt#` and it supports slash commands.  
+[招待リンク](https://discord.com/api/oauth2/authorize?client_id=888635684552863774&permissions=172339022401&scope=bot%20applications.commands) ｜ [サポートサーバー](https://discord.gg/ugMGw5w)
+
+## Table of Contents
+* [General commands](#General commands)
+* [Music Player](#Music Player)
+* [Readout](#Readout)
+* [Credit](#Credit)
+
+### General Commands.
+`rt#help` or `rt#info` will show the URL of this site.
+
+### Music Player
+Supports playback of YouTube, Nico Nico Douga and SoundCloud.  
+Some commands, such as the skip command, cannot be executed if there are other people listening to the music and you do not have a DJ role or administrator privileges.  
+For more information on DJ roles, see below.
+#### rt#play URL
+This will play the music from the URL given to you.  
+As mentioned above, it supports YouTube, Nico Nico Douga, and SoundCloud.  
+If the URL is not the one given, it will search YouTube.  
+If the URL is not a URL, it will search YouTube. If the URL is a YouTube playlist, it will add all the songs in the playlist to the queue.  
+A queue is a list of music to be played.
+#### rt#queue
+Displays the songs in the queue.  
+You can also select a song in the queue to remove it from the queue.  
+If you have created a playlist, you can also select a song in the queue to add it to the playlist.
+#### rt#clear
+Clear all songs in the queue.
+#### rt#skip
+Stop the currently playing song and play the next song.
+#### rt#pause
+Pause the currently playing song.  
+If the song is already paused, it will resume playing.  
+Note: If you leave the music playing while it is paused, Rintan will feel uncomfortable and quit playing music.
+#### rt#loop
+Loop the currently playing song.  
+If it is already looping, it will cancel the loop.
+#### rt#shuffle
+Shuffle the songs in the queue.
+#### rt#now
+Displays information about the currently playing song.
+#### rt#playlist
+Playlist function.
+##### rt#playlist show
+Shows the songs in the playlist.  
+You can also select a song in the displayed playlist to delete it.
+##### rt#playlist create name
+Creates a new playlist with the name `name`.  
+Up to ten playlists can be created.
+##### rt#playlist delete name
+Delete a playlist with the name `name`.
+##### rt#playlist add URL
+Add the music of `URL` to the playlist.  
+Up to 800 songs can be added to one playlist.
+##### rt#playlist play
+Play a song from the playlist.
+#### rt#disconnect
+Ends music playback.
+
+### readout
+Play back the content of a message sent to the text channel on the voice channel.
+#### rt#tts join
+Starts reading out loud.
+#### rt#tts leave
+End reading.
+#### rt#tts voice
+Change the voice used for reading out loud.  
+You can use Slowly Reimu, Slowly Marisa, etc.  
+Note: Hatsune Miku is available, but it's not stable. Be careful, it may cause real loss.
+
+### Credits
+The picture of Ritsu-tan's icon is by [Mayatsuki](https://coconala.com/users/246022) for making the picture of Ritsu-tan!  
+Thank you very much.  
+Translated with www.DeepL.com/Translator (free version)
