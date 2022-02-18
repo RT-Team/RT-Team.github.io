@@ -3,7 +3,7 @@
 「RTってなに?」って人は[ここ](https://rt-bot.com/)に行こう。
 
 ## english
-Watch [here](/en/index.md).
+Watch [here](/en).
 
 ## カテゴリー
 * [RTのトラブルシューティング](/trouble)
