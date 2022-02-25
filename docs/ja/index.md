@@ -6,7 +6,7 @@
 Watch [here](/en).
 
 ## カテゴリー
-* [RTのトラブルシューティング](/trouble)
+* [RTのトラブルシューティング](/ja/trouble)
 * [Notes (メモ, Tips)](/ja/notes)
 * [りつたん (RTのサブ)](/rt-chan)
 
